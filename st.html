@@ -111,13 +111,19 @@
 																							</table>
 																						</td>
 																					</tr>
-																					### IN PROGRESS ###
+																					{* ### IN PROGRESS ### *}
 																					
-																					### THIS LOOP REPLACES THE NEXT FOUR XSL IF BLOCKS ###
-																					{foreach newsletter.headlineranker.headline_list as item}
-																					### how do I count the loops to set i? ###
+																					{* ### THIS LOOP REPLACES THE NEXT FOUR XSL IF BLOCKS ### *}
+
+																					{* Use brute force to count the number of items *}
+																					{numberOfItems = 0}
+																					{foreach newsletter.headlineranker.headline_list as i, item}
+																						{numberOfItems = numberOfItems + 1}
+																					{/foreach}
+																					{foreach newsletter.headlineranker.headline_list as i, item}
 																						<tr>
-																							<td valign="top" width="100%" style="{if i == 1}padding-top:15px; {/if}padding-bottom:15px; {if}border-bottom:1px solid #e2e2e2; {/if}color: #121212; padding-bottom:15px;">
+																							{* I have Zephyr code inside an attribute. *}
+																							<td valign="top" width="100%" style="{if i == 0}padding-top:15px; {/if}padding-bottom:15px; {if i == numberOfItems - 1}border-bottom:1px solid #e2e2e2; {/if}color: #121212; padding-bottom:15px;">
 																								<table width="100%" border="0" cellpadding="0" cellspacing="0">
 																									<tr>
 																										<td style="font-family:'Roboto Slab', Helvetica, Arial, sans-serif;font-size: 24px; -webkit-font-smoothing: antialiased; line-height: 26px; text-align: left; font-weight: bold;">
@@ -202,8 +208,8 @@
 																							</td>
 																						</tr>
 																					{/foreach}
-																					### END IN PROGRESS ###
-																					### TODO ###
+																					{* ### END IN PROGRESS ### *}
+																					{* ### TODO ### *}
 																				</table>
 																			</td>
 																		</tr>
