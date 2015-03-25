@@ -113,15 +113,20 @@
 																					</tr>
 																					{* ### IN PROGRESS ### *}
 																					
-																					{* ### THIS LOOP REPLACES THE NEXT FOUR XSL IF BLOCKS ### *}
+																					{* ### THIS LOOP REPLACES FOUR XSL IF BLOCKS ### *}
 
-																					{* Use brute force to count the number of items *}
+																					{* Use brute force to count the number of items, up to 4 *}
 																					{numberOfItems = 0}
 																					{foreach newsletter.headlineranker.headline_list as i, item}
 																						{numberOfItems = numberOfItems + 1}
+																						{if numberOfItems = 4}
+																							{break}
+																						{/if}
 																					{/foreach}
+																					{* Loop through up to four headlines *}
 																					{foreach newsletter.headlineranker.headline_list as i, item}
 																						<tr>
+																						{* Special styling for first and last td *}
 																						{if numberOfItems == 1 } {* If there's just one item, add padding-top, border-bottom *}
 																							<td valign="top" width="100%" style="padding-top:15px; padding-bottom:15px; border-bottom:1px solid #e2e2e2; color: #121212; padding-bottom:15px;">
 																						{else if i == 0} {* For the first item, add padding-top *}
@@ -214,6 +219,9 @@
 																								</table>
 																							</td>
 																						</tr>
+																						{if i == 3}
+																							{break}
+																						{/if}
 																					{/foreach}
 																					{* ### END IN PROGRESS ### *}
 																					{* ### TODO ### *}
@@ -231,7 +239,9 @@
 																					<tr>
 																						<td valign="top" width="50%" style="font-family: Georgia, serif; font-size: 16px; line-height: 20px; text-align: left; color: #121212; font-weight: regular;">
 																							<table style="margin-top:3px" border="0" cellspacing="2" cellpadding="4">
-																								{* ### Loop through top_headlines ### *}
+																								{* ### Loop through top_headlines in content ### *}
+																								{foreach content as feedItem}
+																								{/foreach}
 																								<xsl:for-each select="top_headlines/headline">
 																									<xsl:if test="(position() &gt; 4) and (title[.!='']) and (url[.!=''])">
 																										<tr>
