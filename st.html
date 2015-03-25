@@ -1,0 +1,724 @@
+<html>
+	<head>
+		<title>{siteDisplay}</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=no;" name="viewport" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="robots" CONTENT="noindex, nofollow" />
+		<link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css' />
+	</head>
+	<body>
+		<style type="text/css">a:link,a:visited,area{color:0099cc;}a:hover{color:#0067a8;}.sharebtn{text-decoration:none;}.dktxt{color:#121212!important;} .dktxt:hover{color:#0099cc!important;}</style>
+		<style type="text/css">.accent{color:#{channelMap[channel]['accentColor'] ?: 'E50000'}!important;}</style>
+		<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" style="table-layout:fixed;">
+			<tr align="center">
+				<td class="nopadtm" align="center" style="background-color:#FFF; min-width:711px;">
+					<table class="w100m" align="center" width="711" border="0" cellspacing="0" cellpadding="0">
+						<tr align="center">
+							<td align="center">
+								<table align="center" width="90%" border="0" cellspacing="0" cellpadding="0">
+									<tr align="center">
+										<td align="center">
+											<table border="0" cellpadding="0" cellspacing="0" width="100%" style="padding-bottom:10px">
+												<tr>
+													<td width="50%" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12px; text-align: left; color: #989898;">
+														Someone forward you this email? No sweat! <br/>
+														<a href="http://clk.about.com/?zi=4/XR&nl=1">
+															Sign up here to get your own
+														</a>
+													</td>
+													<td width="50%" valign="bottom" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12px; text-align: right; color: #989898;">
+														If you're having trouble viewing this email, <a href="{view_url}">click here</a>.
+													</td>
+												</tr>
+												<tr>
+													<td colspan="2" style="padding-top:15px;">
+														<table width="100%">
+															<tr>
+																<td width="40%">
+																	<img src="http://0.tqn.com/f/newsletter/logos/about{channel ? '-'+channel : ''}.png" />
+																</td>
+																<td width="60%" align="right">
+																	<table>
+																		<tr>
+																			<td style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 15px; text-align: right; padding-right: 10px;" valign="middle" class="accent">Follow Us</td>
+																			<td valign="middle">
+																				<a href="{channelMap[channel]['facebookUrl'] ?: 'http://www.facebook.com/aboutdotcom'}">
+																					<img width="40" height="40" alt="Follow Us on Facebook" src="http://0.tqn.com/f/newsletter/soc/{channel ?: 'about'}_FB.png" />
+																				</a>
+																				&nbsp;
+																				<a href="{channelMap[channel]['twitterUrl'] ?: 'http://twitter.com/aboutdotcom'}">
+																					<img width="40" height="40" alt="Follow Us on Twitter" src="http://0.tqn.com/f/newsletter/soc/{channel ?: 'about'}_twitter.png" />
+																				</a>
+																				&nbsp;
+																				<a href="{channelMap[channel]['pinterestUrl'] ?: 'http://www.pinterest.com/aboutdotcom'}">
+																					<img width="40" height="40" alt="Follow Us on Pinterest" src="http://0.tqn.com/f/newsletter/soc/{channel ?: 'about'}_pin.png" />
+																				</a>
+																				&nbsp;
+																				<a href="{channelMap[channel]['gplusUrl'] ?: 'http://google.com/+aboutdotcom'}">
+																					<img width="40" height="40" alt="Follow Us on Google+" src="http://0.tqn.com/f/newsletter/soc/{channel ?: 'about'}_gPlus.png" />
+																				</a>
+																			</td>
+																		</tr>
+																	</table>
+																</td>
+															</tr>
+														</table>
+													</td>
+												</tr>
+											</table>
+											<table border="0" cellpadding="0" cellspacing="0" width="100%">
+												<tr>
+													<td class="h1m accent" style="font-family: 'Roboto Slab', Helvetica, Arial, sans-serif; font-size: 27px; -webkit-font-smoothing: antialiased; text-align: center; font-weight: bold; border-top: 1px solid #e2e2e2; padding-top: 8px;">
+														{newsletter.heading}
+													</td>
+												</tr>
+												<tr>
+													<td style="font-family: Georgia, serif; font-size: 16px; text-align: left; line-height:22px; color: #121212; font-style: italic; padding-top:10px;">
+														{newsletter.intro}
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<table border="0" cellpadding="0" cellspacing="0" width="100%">
+															<tr>
+																<td>
+																	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+																		<tr>
+																			<td valign="top">
+																				<table border="0" cellpadding="0" cellspacing="0" width="100%">
+																					<tr>
+																						<td colspan="2" style="padding-bottom:5px">
+																							<table border="0" cellpadding="0" cellspacing="0" width="100%">
+																								<tr>
+																									<td width="55" valign="top">
+																										<a href="{bio}">
+																											<img border="0" height="40" width="40" src="http://0.tqn.com/d/g/bw/{newsletter.author}.gif" />
+																										</a>
+																									</td>
+																									<td>
+																										<div>
+																										<font face="'Helvetica Neue', Helvetica, Arial, sans-serif" size="2" color="#989898">
+																										<a style="color:#989898;text-decoration:none;font-size:14px;line-height:17px;" href="{bio}">
+																											{author}
+																											<br/>
+																											{siteDisplay} Expert
+																										</a>
+																										</font>
+																										</div>
+																									</td>
+																								</tr>
+																							</table>
+																						</td>
+																					</tr>
+																					### TODO ###
+																					<xsl:if test="top_headlines/headline[1]/text != ''">
+																						<tr>
+																							<td valign="top" width="100%" style="padding-top:15px; color: #121212; padding-bottom:15px;">
+																								<table width="100%" border="0" cellpadding="0" cellspacing="0">
+																									<tr>
+																										<td style="font-family:'Roboto Slab', Helvetica, Arial, sans-serif;font-size: 24px; -webkit-font-smoothing: antialiased; line-height: 26px; text-align: left; font-weight: bold;">
+																											<a style="text-decoration:none;" class="dktxt">
+																												<xsl:attribute name="href">
+																												<xsl:value-of select="top_headlines/headline[1]/url"/>
+																												</xsl:attribute>
+																												<xsl:value-of select="top_headlines/headline[1]/title" disable-output-escaping="yes"/>
+																											</a>
+																										</td>
+																									</tr>
+																									<tr>
+																										<td style="padding-top: 10px; font-family: Georgia, serif; font-size: 16px; line-height: 22px; text-align: left; color: #121212;">
+																											<xsl:value-of select="top_headlines/headline[1]/text" disable-output-escaping="yes"/>
+																										</td>
+																										<xsl:if test="top_headlines/headline[1]/image/url != ''">
+																											<td valign="top" style="padding:15px 0 5px 15px">
+																												<img width="125">
+																												<xsl:attribute name="src">
+																												<xsl:value-of select="top_headlines/headline[1]/image/url"/>
+																												</xsl:attribute>
+																												</img>
+																											</td>
+																										</xsl:if>
+																									</tr>
+																									<tr>
+																										<td style="padding-top:10px;">
+																											<table>
+																												<tr>
+																												<td width="125" style="padding-right: 20px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13px; text-align: left; color: #BA0082; font-weight: bold;">
+																												<a style="text-decoration: none;" class="accent"><xsl:attribute name="href"><xsl:value-of select="top_headlines/headline[1]/url"/></xsl:attribute>READ NOW <span style="font-size: 18px;"><xsl:text disable-output-escaping="yes"><![CDATA[&#187;]]></xsl:text></span></a>
+																												</td>
+																												<td>
+																												<table>
+																												<tr>
+																												<td valign="middle" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px; text-align: left; color: #989898; padding-right:8px;">Share </td>
+																												<td>
+																												<a>
+																												<xsl:attribute name="class">sharebtn</xsl:attribute>
+																												<xsl:attribute name="href">
+																												<xsl:text disable-output-escaping="yes"><![CDATA[http://www.facebook.com/share.php?u=]]></xsl:text>
+																												<xsl:value-of select="top_headlines/headline[1]/url"/>
+																												<xsl:text disable-output-escaping="yes"><![CDATA[&text=]]></xsl:text>
+																												<xsl:value-of select="top_headlines/headline[1]/title" disable-output-escaping="no"/>
+																												</xsl:attribute>
+																												<img>
+																												<xsl:attribute name="width">18</xsl:attribute>
+																												<xsl:attribute name="height">19</xsl:attribute>
+																												<xsl:attribute name="alt">Share on Facebook</xsl:attribute>
+																												<xsl:attribute name="src">
+																												<xsl:text disable-output-escaping="yes"><![CDATA[http://0.tqn.com/f/newsletter/soc/share_FB.jpg]]></xsl:text>
+																												</xsl:attribute>
+																												</img>
+																												</a>
+																												<xsl:text disable-output-escaping="yes"><![CDATA[&nbsp;]]></xsl:text>
+																												<a>
+																												<xsl:attribute name="class">sharebtn</xsl:attribute>
+																												<xsl:attribute name="href">
+																												<xsl:text disable-output-escaping="yes"><![CDATA[http://twitter.com/share?url=]]></xsl:text>
+																												<xsl:value-of select="top_headlines/headline[1]/url"/>
+																												<xsl:text disable-output-escaping="yes"><![CDATA[&text=]]></xsl:text>
+																												<xsl:value-of select="top_headlines/headline[1]/title" disable-output-escaping="no"/>
+																												</xsl:attribute>
+																												<img>
+																												<xsl:attribute name="width">18</xsl:attribute>
+																												<xsl:attribute name="height">19</xsl:attribute>
+																												<xsl:attribute name="alt">Share on Twitter</xsl:attribute>
+																												<xsl:attribute name="src">
+																												<xsl:text disable-output-escaping="yes"><![CDATA[http://0.tqn.com/f/newsletter/soc/share_twitter.jpg]]></xsl:text>
+																												</xsl:attribute>
+																												</img>
+																												</a>
+																												</td>
+																												</tr>
+																												</table>
+																												</td>
+																												</tr>
+																											</table>
+																										</td>
+																									</tr>
+																								</table>
+																							</td>
+																						</tr>
+																					</xsl:if>
+																					<xsl:if test="top_headlines/headline[2]/text != ''">
+																						<tr>
+																							<td valign="top" width="100%" style="color: #121212; padding-bottom:15px;">
+																								<table width="100%" border="0" cellpadding="0" cellspacing="0">
+																									<tr>
+																										<td style="font-family:'Roboto Slab', Helvetica, Arial, sans-serif;font-size: 24px; -webkit-font-smoothing: antialiased; line-height: 26px; text-align: left; font-weight: bold;">
+																											<a style="text-decoration:none;" class="dktxt">
+																												<xsl:attribute name="href">
+																												<xsl:value-of select="top_headlines/headline[2]/url"/>
+																												</xsl:attribute>
+																												<xsl:value-of select="top_headlines/headline[2]/title" disable-output-escaping="yes"/>
+																											</a>
+																										</td>
+																									</tr>
+																									<tr>
+																										<td style="padding-top: 10px; font-family: Georgia, serif; font-size: 16px; line-height: 22px; text-align: left; color: #121212;">
+																											<xsl:value-of select="top_headlines/headline[2]/text" disable-output-escaping="yes"/>
+																										</td>
+																										<xsl:if test="top_headlines/headline[2]/image/url != ''">
+																											<td valign="top" style="padding:15px 0 5px 15px">
+																												<img width="125">
+																												<xsl:attribute name="src">
+																												<xsl:value-of select="top_headlines/headline[2]/image/url"/>
+																												</xsl:attribute>
+																												</img>
+																											</td>
+																										</xsl:if>
+																									</tr>
+																									<tr>
+																										<td style="padding-top:10px;">
+																											<table>
+																												<tr>
+																												<td width="125" style="padding-right: 20px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13px; text-align: left; color: #BA0082; font-weight: bold;">
+																												<a style="text-decoration: none;" class="accent"><xsl:attribute name="href"><xsl:value-of select="top_headlines/headline[2]/url"/></xsl:attribute>READ NOW <span style="font-size: 18px;"><xsl:text disable-output-escaping="yes"><![CDATA[&#187;]]></xsl:text></span></a>
+																												</td>
+																												<td>
+																												<table>
+																												<tr>
+																												<td valign="middle" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px; text-align: left; color: #989898; padding-right:8px;">Share </td>
+																												<td>
+																												<a>
+																												<xsl:attribute name="class">sharebtn</xsl:attribute>
+																												<xsl:attribute name="href">
+																												<xsl:text disable-output-escaping="yes"><![CDATA[http://www.facebook.com/share.php?u=]]></xsl:text>
+																												<xsl:value-of select="top_headlines/headline[2]/url"/>
+																												<xsl:text disable-output-escaping="yes"><![CDATA[&text=]]></xsl:text>
+																												<xsl:value-of select="top_headlines/headline[2]/title" disable-output-escaping="no"/>
+																												</xsl:attribute>
+																												<img>
+																												<xsl:attribute name="width">18</xsl:attribute>
+																												<xsl:attribute name="height">19</xsl:attribute>
+																												<xsl:attribute name="alt">Share on Facebook</xsl:attribute>
+																												<xsl:attribute name="src">
+																												<xsl:text disable-output-escaping="yes"><![CDATA[http://0.tqn.com/f/newsletter/soc/share_FB.jpg]]></xsl:text>
+																												</xsl:attribute>
+																												</img>
+																												</a>
+																												<xsl:text disable-output-escaping="yes"><![CDATA[&nbsp;]]></xsl:text>
+																												<a>
+																												<xsl:attribute name="class">sharebtn</xsl:attribute>
+																												<xsl:attribute name="href">
+																												<xsl:text disable-output-escaping="yes"><![CDATA[http://twitter.com/share?url=]]></xsl:text>
+																												<xsl:value-of select="top_headlines/headline[2]/url"/>
+																												<xsl:text disable-output-escaping="yes"><![CDATA[&text=]]></xsl:text>
+																												<xsl:value-of select="top_headlines/headline[2]/title" disable-output-escaping="no"/>
+																												</xsl:attribute>
+																												<img>
+																												<xsl:attribute name="width">18</xsl:attribute>
+																												<xsl:attribute name="height">19</xsl:attribute>
+																												<xsl:attribute name="alt">Share on Twitter</xsl:attribute>
+																												<xsl:attribute name="src">
+																												<xsl:text disable-output-escaping="yes"><![CDATA[http://0.tqn.com/f/newsletter/soc/share_twitter.jpg]]></xsl:text>
+																												</xsl:attribute>
+																												</img>
+																												</a>
+																												</td>
+																												</tr>
+																												</table>
+																												</td>
+																												</tr>
+																											</table>
+																										</td>
+																									</tr>
+																								</table>
+																							</td>
+																						</tr>
+																					</xsl:if>
+																					<xsl:if test="top_headlines/headline[3]/text != ''">
+																						<tr>
+																							<td valign="top" width="100%" style="color: #121212; padding-bottom:15px;">
+																								<table width="100%" border="0" cellpadding="0" cellspacing="0">
+																									<tr>
+																										<td style="font-family:'Roboto Slab', Helvetica, Arial, sans-serif;font-size: 24px; -webkit-font-smoothing: antialiased; line-height: 26px; text-align: left; font-weight: bold;">
+																											<a style="text-decoration:none;" class="dktxt">
+																												<xsl:attribute name="href">
+																												<xsl:value-of select="top_headlines/headline[3]/url"/>
+																												</xsl:attribute>
+																												<xsl:value-of select="top_headlines/headline[3]/title" disable-output-escaping="yes"/>
+																											</a>
+																										</td>
+																									</tr>
+																									<tr>
+																										<td style="padding-top: 10px; font-family: Georgia, serif; font-size: 16px; line-height: 22px; text-align: left; color: #121212;">
+																											<xsl:value-of select="top_headlines/headline[3]/text" disable-output-escaping="yes"/>
+																										</td>
+																										<xsl:if test="top_headlines/headline[3]/image/url != ''">
+																											<td valign="top" style="padding:15px 0 5px 15px">
+																												<img width="125">
+																												<xsl:attribute name="src">
+																												<xsl:value-of select="top_headlines/headline[3]/image/url"/>
+																												</xsl:attribute>
+																												</img>
+																											</td>
+																										</xsl:if>
+																									</tr>
+																									<tr>
+																										<td style="padding-top:10px;">
+																											<table>
+																												<tr>
+																												<td width="125" style="padding-right: 20px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13px; text-align: left; color: #BA0082; font-weight: bold;">
+																												<a style="text-decoration: none;" class="accent"><xsl:attribute name="href"><xsl:value-of select="top_headlines/headline[3]/url"/></xsl:attribute>READ NOW <span style="font-size: 18px;"><xsl:text disable-output-escaping="yes"><![CDATA[&#187;]]></xsl:text></span></a>
+																												</td>
+																												<td>
+																												<table>
+																												<tr>
+																												<td valign="middle" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px; text-align: left; color: #989898; padding-right:8px;">Share </td>
+																												<td>
+																												<a>
+																												<xsl:attribute name="class">sharebtn</xsl:attribute>
+																												<xsl:attribute name="href">
+																												<xsl:text disable-output-escaping="yes"><![CDATA[http://www.facebook.com/share.php?u=]]></xsl:text>
+																												<xsl:value-of select="top_headlines/headline[3]/url"/>
+																												<xsl:text disable-output-escaping="yes"><![CDATA[&text=]]></xsl:text>
+																												<xsl:value-of select="top_headlines/headline[3]/title" disable-output-escaping="no"/>
+																												</xsl:attribute>
+																												<img>
+																												<xsl:attribute name="width">18</xsl:attribute>
+																												<xsl:attribute name="height">19</xsl:attribute>
+																												<xsl:attribute name="alt">Share on Facebook</xsl:attribute>
+																												<xsl:attribute name="src">
+																												<xsl:text disable-output-escaping="yes"><![CDATA[http://0.tqn.com/f/newsletter/soc/share_FB.jpg]]></xsl:text>
+																												</xsl:attribute>
+																												</img>
+																												</a>
+																												<xsl:text disable-output-escaping="yes"><![CDATA[&nbsp;]]></xsl:text>
+																												<a>
+																												<xsl:attribute name="class">sharebtn</xsl:attribute>
+																												<xsl:attribute name="href">
+																												<xsl:text disable-output-escaping="yes"><![CDATA[http://twitter.com/share?url=]]></xsl:text>
+																												<xsl:value-of select="top_headlines/headline[3]/url"/>
+																												<xsl:text disable-output-escaping="yes"><![CDATA[&text=]]></xsl:text>
+																												<xsl:value-of select="top_headlines/headline[3]/title" disable-output-escaping="no"/>
+																												</xsl:attribute>
+																												<img>
+																												<xsl:attribute name="width">18</xsl:attribute>
+																												<xsl:attribute name="height">19</xsl:attribute>
+																												<xsl:attribute name="alt">Share on Twitter</xsl:attribute>
+																												<xsl:attribute name="src">
+																												<xsl:text disable-output-escaping="yes"><![CDATA[http://0.tqn.com/f/newsletter/soc/share_twitter.jpg]]></xsl:text>
+																												</xsl:attribute>
+																												</img>
+																												</a>
+																												</td>
+																												</tr>
+																												</table>
+																												</td>
+																												</tr>
+																											</table>
+																										</td>
+																									</tr>
+																								</table>
+																							</td>
+																						</tr>
+																					</xsl:if>
+																					<xsl:if test="top_headlines/headline[4]/text != ''">
+																						<tr>
+																							<td valign="top" width="100%" style="color: #121212; padding-bottom:15px; border-bottom:1px solid #e2e2e2;">
+																								<table width="100%" border="0" cellpadding="0" cellspacing="0">
+																									<tr>
+																										<td style="font-family:'Roboto Slab', Helvetica, Arial, sans-serif;font-size: 24px; -webkit-font-smoothing: antialiased; line-height: 26px; text-align: left; font-weight: bold;">
+																											<a style="text-decoration:none;" class="dktxt">
+																												<xsl:attribute name="href">
+																												<xsl:value-of select="top_headlines/headline[4]/url"/>
+																												</xsl:attribute>
+																												<xsl:value-of select="top_headlines/headline[4]/title" disable-output-escaping="yes"/>
+																											</a>
+																										</td>
+																									</tr>
+																									<tr>
+																										<td style="padding-top: 10px; font-family: Georgia, serif; font-size: 16px; line-height: 22px; text-align: left; color: #121212;">
+																											<xsl:value-of select="top_headlines/headline[4]/text" disable-output-escaping="yes"/>
+																										</td>
+																										<xsl:if test="top_headlines/headline[4]/image/url != ''">
+																											<td valign="top" style="padding:15px 0 5px 15px">
+																												<img width="125">
+																												<xsl:attribute name="src">
+																												<xsl:value-of select="top_headlines/headline[4]/image/url"/>
+																												</xsl:attribute>
+																												</img>
+																											</td>
+																										</xsl:if>
+																									</tr>
+																									<tr>
+																										<td style="padding-top:10px;">
+																											<table>
+																												<tr>
+																												<td width="125" style="padding-right: 20px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13px; text-align: left; color: #BA0082; font-weight: bold;">
+																												<a style="text-decoration: none;" class="accent"><xsl:attribute name="href"><xsl:value-of select="top_headlines/headline[4]/url"/></xsl:attribute>READ NOW <span style="font-size: 18px;"><xsl:text disable-output-escaping="yes"><![CDATA[&#187;]]></xsl:text></span></a>
+																												</td>
+																												<td>
+																												<table>
+																												<tr>
+																												<td valign="middle" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px; text-align: left; color: #989898; padding-right:8px;">Share </td>
+																												<td>
+																												<a>
+																												<xsl:attribute name="class">sharebtn</xsl:attribute>
+																												<xsl:attribute name="href">
+																												<xsl:text disable-output-escaping="yes"><![CDATA[http://www.facebook.com/share.php?u=]]></xsl:text>
+																												<xsl:value-of select="top_headlines/headline[4]/url"/>
+																												<xsl:text disable-output-escaping="yes"><![CDATA[&text=]]></xsl:text>
+																												<xsl:value-of select="top_headlines/headline[4]/title" disable-output-escaping="no"/>
+																												</xsl:attribute>
+																												<img>
+																												<xsl:attribute name="width">18</xsl:attribute>
+																												<xsl:attribute name="height">19</xsl:attribute>
+																												<xsl:attribute name="alt">Share on Facebook</xsl:attribute>
+																												<xsl:attribute name="src">
+																												<xsl:text disable-output-escaping="yes"><![CDATA[http://0.tqn.com/f/newsletter/soc/share_FB.jpg]]></xsl:text>
+																												</xsl:attribute>
+																												</img>
+																												</a>
+																												<xsl:text disable-output-escaping="yes"><![CDATA[&nbsp;]]></xsl:text>
+																												<a>
+																												<xsl:attribute name="class">sharebtn</xsl:attribute>
+																												<xsl:attribute name="href">
+																												<xsl:text disable-output-escaping="yes"><![CDATA[http://twitter.com/share?url=]]></xsl:text>
+																												<xsl:value-of select="top_headlines/headline[4]/url"/>
+																												<xsl:text disable-output-escaping="yes"><![CDATA[&text=]]></xsl:text>
+																												<xsl:value-of select="top_headlines/headline[4]/title" disable-output-escaping="no"/>
+																												</xsl:attribute>
+																												<img>
+																												<xsl:attribute name="width">18</xsl:attribute>
+																												<xsl:attribute name="height">19</xsl:attribute>
+																												<xsl:attribute name="alt">Share on Twitter</xsl:attribute>
+																												<xsl:attribute name="src">
+																												<xsl:text disable-output-escaping="yes"><![CDATA[http://0.tqn.com/f/newsletter/soc/share_twitter.jpg]]></xsl:text>
+																												</xsl:attribute>
+																												</img>
+																												</a>
+																												</td>
+																												</tr>
+																												</table>
+																												</td>
+																												</tr>
+																											</table>
+																										</td>
+																									</tr>
+																								</table>
+																							</td>
+																						</tr>
+																					</xsl:if>
+																				</table>
+																			</td>
+																		</tr>
+																	</table>
+																	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+																		<tr>
+																			<td style="padding-top:15px; padding-bottom:10px; font-family: 'Roboto Slab', Helvetica, Arial, sans-serif; font-size: 18px; -webkit-font-smoothing: antialiased; text-align: center; font-weight: bold;" class="accent">MORE FROM ABOUT.COM</td>
+																		</tr>
+																		<tr>
+																			<td style="padding-bottom:15px;">
+																				<table border="0" cellpadding="0" cellspacing="0" width="100%">
+																					<tr>
+																						<td valign="top" width="50%" style="font-family: Georgia, serif; font-size: 16px; line-height: 20px; text-align: left; color: #121212; font-weight: regular;">
+																							<table style="margin-top:3px" border="0" cellspacing="2" cellpadding="4">
+																								<xsl:for-each select="top_headlines/headline">
+																									<xsl:if test="(position() &gt; 4) and (title[.!='']) and (url[.!=''])">
+																										<tr>
+																											<td width="5%" valign="top" style="color:#989898;font-size:16px;line-height:20px;">&#8226;</td>
+																											<td>
+																												<a>
+																												<xsl:attribute name="style">
+																												<xsl:text disable-output-escaping="yes"><![CDATA[text-decoration:none;]]></xsl:text>
+																												</xsl:attribute>
+																												<xsl:attribute name="class">
+																												<xsl:text disable-output-escaping="yes"><![CDATA[dktxt]]></xsl:text>
+																												</xsl:attribute>
+																												<xsl:attribute name="href">
+																												<xsl:value-of select="url"/>
+																												</xsl:attribute>
+																												<xsl:value-of select="title" disable-output-escaping="yes"/>
+																												</a>
+																											</td>
+																										</tr>
+																									</xsl:if>
+																								</xsl:for-each>
+																							</table>
+																						</td>
+																						<td class="resizem" style="border-collapse:collapse;">
+																							<table border="0" cellpadding="0" cellspacing="0">
+																								<tr>
+																									<td colspan="2" style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:10px;text-align:center;color:#989898;padding-bottom:3px;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;border-collapse:collapse;">Advertisement</td>
+																								</tr>
+																								<tr>
+																									<td colspan="2" style="border-collapse:collapse;">
+																										<xsl:text disable-output-escaping="yes"><![CDATA[<a href="http://li.about.com/click?s=112622&sz=300x250&li={blast.list}&e={email}&p={blast.id}" rel="nofollow" style="display:block;width:300px;height:250px;color:#00be87;text-decoration:none;">]]></xsl:text>
+																										<xsl:text disable-output-escaping="yes"><![CDATA[<img src="http://li.about.com/imp?s=112622&sz=300x250&li={blast.list}&e={email}&p={blast.id}" width="300" height="250" border="0" style="border-style:none;outline-style:none;display:block;transition:all .25s;" />]]></xsl:text>
+																										<xsl:text disable-output-escaping="yes"><![CDATA[</a>]]></xsl:text>
+																									</td>
+																								</tr>
+																								<tr style="display:block;height:1px;line-height:1px;">
+																									<td style="border-collapse:collapse;">
+																										<xsl:text disable-output-escaping="yes"><![CDATA[<img src="http://li.about.com/imp?s=112623&sz=1x1&li={blast.list}&e={email}&p={blast.id}" width="10" height="1" style="border-style:none;outline-style:none;display:block;" />]]></xsl:text>
+																									</td>
+																									<td style="border-collapse:collapse;">
+																										<xsl:text disable-output-escaping="yes"><![CDATA[<img src="http://li.about.com/imp?s=112624&sz=1x1&li={blast.list}&e={email}&p={blast.id}" width="10" height="1" style="border-style:none;outline-style:none;display:block;" />]]></xsl:text>
+																									</td>
+																								</tr>
+																								<tr>
+																									<td align="left" style="border-collapse:collapse;">
+																										<xsl:text disable-output-escaping="yes"><![CDATA[<a href="http://li.about.com/click?s=112616&sz=116x15&li={blast.list}&e={email}&p={blast.id}" rel="nofollow" style="color:#00be87;text-decoration:none;">]]></xsl:text>
+																										<xsl:text disable-output-escaping="yes"><![CDATA[<img src="http://li.about.com/imp?s=112616&sz=116x15&li={blast.list}&e={email}&p={blast.id}" border="0" style="border-style:none;outline-style:none;display:block;transition:all .25s;" />]]></xsl:text>
+																										<xsl:text disable-output-escaping="yes"><![CDATA[</a>]]></xsl:text>
+																									</td>
+																									<td align="right" style="border-collapse:collapse;">
+																										<xsl:text disable-output-escaping="yes"><![CDATA[<a href="http://li.about.com/click?s=112617&sz=69x15&li={blast.list}&e={email}&p={blast.id}" rel="nofollow" style="color:#00be87;text-decoration:none;">]]></xsl:text>
+																										<xsl:text disable-output-escaping="yes"><![CDATA[<img src="http://li.about.com/imp?s=112617&sz=69x15&li={blast.list}&e={email}&p={blast.id}" border="0" style="border-style:none;outline-style:none;display:block;transition:all .25s;" />]]></xsl:text>
+																										<xsl:text disable-output-escaping="yes"><![CDATA[</a>]]></xsl:text>
+																									</td>
+																								</tr>
+																							</table>
+																						</td>
+																					</tr>
+																				</table>
+																			</td>
+																		</tr>
+																	</table>
+																	<table width="100%">
+																		<tr>
+																			<td align="center" style="padding-top:20px; border-top: 1px solid #e2e2e2;">
+																				<table>
+																					<tr>
+																						<td style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px;" valign="middle" class="accent">
+																							<a><xsl:attribute name="href"><xsl:text disable-output-escaping="yes"><![CDATA[http://www.about.com/]]></xsl:text><xsl:value-of select="cdn"/></xsl:attribute><xsl:attribute name="class"><xsl:text disable-output-escaping="yes"><![CDATA[accent]]></xsl:text></xsl:attribute><xsl:attribute name="style"><xsl:text disable-output-escaping="yes"><![CDATA[text-decoration:none;]]></xsl:text></xsl:attribute>
+																								About <xsl:value-of select="cdpn" disable-output-escaping="yes"/>
+																							</a>
+																						</td>
+																						<td valign="middle" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px;color:#121212;"> | Follow Us:</td>
+																						<td valign="middle">
+																							<a>
+																								<xsl:attribute name="href">
+																									<xsl:value-of select="$fbu"/>
+																								</xsl:attribute>
+																								<img>
+																									<xsl:attribute name="width">40</xsl:attribute>
+																									<xsl:attribute name="height">40</xsl:attribute>
+																									<xsl:attribute name="alt">Follow Us on Facebook</xsl:attribute>
+																									<xsl:attribute name="src">
+																										<xsl:text disable-output-escaping="yes"><![CDATA[http://0.tqn.com/f/newsletter/soc/footer_FB.png]]></xsl:text>
+																									</xsl:attribute>
+																								</img>
+																							</a>
+																							<xsl:text disable-output-escaping="yes"><![CDATA[&nbsp;]]></xsl:text>
+																							<a>
+																								<xsl:attribute name="href">
+																									<xsl:value-of select="$twu"/>
+																								</xsl:attribute>
+																								<img>
+																									<xsl:attribute name="width">40</xsl:attribute>
+																									<xsl:attribute name="height">40</xsl:attribute>
+																									<xsl:attribute name="alt">Follow Us on Twitter</xsl:attribute>
+																									<xsl:attribute name="src">
+																										<xsl:text disable-output-escaping="yes"><![CDATA[http://0.tqn.com/f/newsletter/soc/footer_twitter.png]]></xsl:text>
+																									</xsl:attribute>
+																								</img>
+																							</a>
+																							<xsl:text disable-output-escaping="yes"><![CDATA[&nbsp;]]></xsl:text>
+																							<a>
+																								<xsl:attribute name="href">
+																									<xsl:value-of select="$ptu"/>
+																								</xsl:attribute>
+																								<img>
+																									<xsl:attribute name="width">40</xsl:attribute>
+																									<xsl:attribute name="height">40</xsl:attribute>
+																									<xsl:attribute name="alt">Follow Us on Pinterest</xsl:attribute>
+																									<xsl:attribute name="src">
+																										<xsl:text disable-output-escaping="yes"><![CDATA[http://0.tqn.com/f/newsletter/soc/footer_pin.png]]></xsl:text>
+																									</xsl:attribute>
+																								</img>
+																							</a>
+																							<xsl:text disable-output-escaping="yes"><![CDATA[&nbsp;]]></xsl:text>
+																							<a>
+																								<xsl:attribute name="href">
+																									<xsl:value-of select="$gpu"/>
+																								</xsl:attribute>
+																								<img>
+																									<xsl:attribute name="width">40</xsl:attribute>
+																									<xsl:attribute name="height">40</xsl:attribute>
+																									<xsl:attribute name="alt">Follow Us on Google+</xsl:attribute>
+																									<xsl:attribute name="src">
+																										<xsl:text disable-output-escaping="yes"><![CDATA[http://0.tqn.com/f/newsletter/soc/footer_gPlus.png]]></xsl:text>
+																									</xsl:attribute>
+																								</img>
+																							</a>
+																						</td>
+																					</tr>
+																				</table>
+																			</td>
+																		</tr>
+																		<tr>
+																			<td align="center" style="padding-top:15px; padding-bottom:15px; font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; color:#989898; text-align:center;font-size:14px;line-height:22px;">
+																				You are receiving this newsletter because you subscribed to the About 
+																				<xsl:value-of select="name"/>
+																				newsletter. If you wish to unsubscribe, please 
+																				<xsl:text disable-output-escaping="yes"><![CDATA[<a href="{optout_confirm_url}">click here</a>]]></xsl:text>. If you would like to unsubscribe from all newsletters sent from About.com, please send an email to <a href="mailto:optout@about.com?subject=Unsubscribe">optout@about.com</a> with "Unsubscribe" as the subject line. 
+																			</td>
+																		</tr>
+																		<tr>
+																			<td style="border-top:1px solid #e2e2e2; padding-top:15px;">
+																				<table width="100%">
+																					<tr>
+																						<td width="50%" style="font-size:11px;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; color:#989898;">1500 Broadway, 6th Floor, New York, NY, 10036</td>
+																						<td width="50%" style="text-align:right; font-size:11px;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; color:#989898;"><xsl:text disable-output-escaping="yes"><![CDATA[&copy;]]></xsl:text> 2014 About.com - All rights reserved - <a href="http://www.about.com/gi/pages/mprivacy.htm">Privacy Policy</a></td>
+																					</tr>
+																				</table>
+																			</td>
+																		</tr>
+																		<tr>
+																			<td>
+																				<xsl:text disable-output-escaping="yes"><![CDATA[&#160;]]></xsl:text>
+																			</td>
+																		</tr>
+																	</table>
+																</td>
+															</tr>
+															<tr>
+																<td height="1" width="100%"/>
+																<img>
+																	<xsl:attribute name="src">http://pixel3.about.com/mp/pixel/pixel.cgi?partner=<xsl:value-of select="pixelref"/></xsl:attribute>
+																	<xsl:attribute name="height">1</xsl:attribute>
+																	<xsl:attribute name="width">1</xsl:attribute>
+																</img>
+															</tr>
+														</table>
+													</td>
+												</tr>
+											</table>
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+		<xsl:text disable-output-escaping="yes"><![CDATA[<!-- <p><small>If you believe this has been sent to you in error, please safely <a href="{optout_confirm_url}" style="color:#0099cc;text-decoration:none;" >unsubscribe</a>.</small></p> -->]]></xsl:text>
+		<xsl:text disable-output-escaping="yes"><![CDATA[<img src="{beacon_src}" /> ]]></xsl:text>
+		<table cellpadding="0" cellspacing="0" border="0" width="24" height="6">
+			<tbody>
+				<tr>
+					<td style="border-collapse:collapse;">
+						<xsl:text disable-output-escaping="yes"><![CDATA[<img src="http://li.about.com/imp?s=123663200&sz=2x1&li={blast.list}&e={email}&p={blast.id}" width="2" height="6" border="0" style="border-style:none;outline-style:none;display:block;"/> ]]></xsl:text>
+					</td>
+					<td style="border-collapse:collapse;">
+						<xsl:text disable-output-escaping="yes"><![CDATA[<img src="http://li.about.com/imp?s=123663201&sz=2x1&li={blast.list}&e={email}&p={blast.id}" width="2" height="6" border="0" style="border-style:none;outline-style:none;display:block;"/> ]]></xsl:text>
+					</td>
+					<td style="border-collapse:collapse;">
+						<xsl:text disable-output-escaping="yes"><![CDATA[<img src="http://li.about.com/imp?s=123663202&sz=2x1&li={blast.list}&e={email}&p={blast.id}" width="2" height="6" border="0" style="border-style:none;outline-style:none;display:block;"/> ]]></xsl:text>
+					</td>
+					<td style="border-collapse:collapse;">
+						<xsl:text disable-output-escaping="yes"><![CDATA[<img src="http://li.about.com/imp?s=123663203&sz=2x1&li={blast.list}&e={email}&p={blast.id}" width="2" height="6" border="0" style="border-style:none;outline-style:none;display:block;"/> ]]></xsl:text>
+					</td>
+					<td style="border-collapse:collapse;">
+						<xsl:text disable-output-escaping="yes"><![CDATA[<img src="http://li.about.com/imp?s=123663204&sz=2x1&li={blast.list}&e={email}&p={blast.id}" width="2" height="6" border="0" style="border-style:none;outline-style:none;display:block;"/> ]]></xsl:text>
+					</td>
+					<td style="border-collapse:collapse;">
+						<xsl:text disable-output-escaping="yes"><![CDATA[<img src="http://li.about.com/imp?s=123663205&sz=2x1&li={blast.list}&e={email}&p={blast.id}" width="2" height="6" border="0" style="border-style:none;outline-style:none;display:block;"/> ]]></xsl:text>
+					</td>
+					<td style="border-collapse:collapse;">
+						<xsl:text disable-output-escaping="yes"><![CDATA[<img src="http://li.about.com/imp?s=123663206&sz=2x1&li={blast.list}&e={email}&p={blast.id}" width="2" height="6" border="0" style="border-style:none;outline-style:none;display:block;"/> ]]></xsl:text>
+					</td>
+					<td style="border-collapse:collapse;">
+						<xsl:text disable-output-escaping="yes"><![CDATA[<img src="http://li.about.com/imp?s=123663207&sz=2x1&li={blast.list}&e={email}&p={blast.id}" width="2" height="6" border="0" style="border-style:none;outline-style:none;display:block;"/> ]]></xsl:text>
+					</td>
+					<td style="border-collapse:collapse;">
+						<xsl:text disable-output-escaping="yes"><![CDATA[<img src="http://li.about.com/imp?s=123663208&sz=2x1&li={blast.list}&e={email}&p={blast.id}" width="2" height="6" border="0" style="border-style:none;outline-style:none;display:block;"/> ]]></xsl:text>
+					</td>
+					<td style="border-collapse:collapse;">
+						<xsl:text disable-output-escaping="yes"><![CDATA[<img src="http://li.about.com/imp?s=123663209&sz=2x1&li={blast.list}&e={email}&p={blast.id}" width="2" height="6" border="0" style="border-style:none;outline-style:none;display:block;"/> ]]></xsl:text>
+					</td>
+					<td style="border-collapse:collapse;">
+						<xsl:text disable-output-escaping="yes"><![CDATA[<img src="http://li.about.com/imp?s=123663210&sz=2x1&li={blast.list}&e={email}&p={blast.id}" width="2" height="6" border="0" style="border-style:none;outline-style:none;display:block;"/> ]]></xsl:text>
+					</td>
+					<td style="border-collapse:collapse;">
+						<xsl:text disable-output-escaping="yes"><![CDATA[<img src="http://li.about.com/imp?s=123663211&sz=2x1&li={blast.list}&e={email}&p={blast.id}" width="2" height="6" border="0" style="border-style:none;outline-style:none;display:block;"/> ]]></xsl:text>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</body>
+</html>
+</xsl:template>
+<xsl:template name="string-replace-all">
+<xsl:param name="text"/>
+<xsl:param name="replace"/>
+<xsl:param name="by"/>
+<xsl:choose>
+	<xsl:when test="contains($text, $replace)">
+		<xsl:value-of select="substring-before($text,$replace)"/>
+		<xsl:value-of select="$by"/>
+		<xsl:call-template name="string-replace-all">
+			<xsl:with-param name="text" select="substring-after($text,$replace)"/>
+			<xsl:with-param name="replace" select="$replace"/>
+			<xsl:with-param name="by" select="$by"/>
+		</xsl:call-template>
+	</xsl:when>
+	<xsl:otherwise>
+		<xsl:value-of select="$text"/>
+	</xsl:otherwise>
+</xsl:choose>
+</xsl:template>
+</xsl:stylesheet>

@@ -1,0 +1,123 @@
+{set("channelMap",
+    {
+        "autos": {
+            "accentColor": "A0A5A5",
+            "facebookUrl": "http://www.facebook.com/aboutdotcom",
+            "twitterUrl": "http://twitter.com/aboutdotcom",
+            "pinterestUrl": "http://www.pinterest.com/aboutdotcom",
+            "gplusUrl": "http://google.com/+aboutdotcom"
+        },
+        "careers": {
+            "accentColor": "0A78A1",
+            "facebookUrl": "http://www.facebook.com/aboutdotcom",
+            "twitterUrl": "http://twitter.com/aboutdotcom",
+            "pinterestUrl": "http://www.pinterest.com/aboutdotcom",
+            "gplusUrl": "http://google.com/+aboutdotcom"
+        },
+        "people": {
+            "accentColor": "3887F0",
+            "facebookUrl": "http://www.facebook.com/aboutdotcom",
+            "twitterUrl": "http://twitter.com/aboutdotcom",
+            "pinterestUrl": "http://www.pinterest.com/aboutdotcom",
+            "gplusUrl": "http://google.com/+aboutdotcom"
+        },
+        "education": {
+            "accentColor": "00781F",
+            "facebookUrl": "https://www.facebook.com/aboutdotcomeducation",
+            "twitterUrl": "http://twitter.com/abouteducation",
+            "pinterestUrl": "http://www.pinterest.com/abouteducation",
+            "gplusUrl": "http://google.com/+aboutdotcom"
+        },
+        "entertainment": {
+            "accentColor": "BF0000",
+            "facebookUrl": "http://www.facebook.com/aboutstyle",
+            "twitterUrl": "https://twitter.com/aboutpopstyle",
+            "pinterestUrl": "http://www.pinterest.com/aboutpopstyle",
+            "gplusUrl": "http://google.com/+aboutdotcom"
+        },
+        "espanol": {
+            "accentColor": "F58214",
+            "facebookUrl": "http://www.facebook.com/AboutEnEspanol",
+            "twitterUrl": "https://twitter.com/aboutenespanol",
+            "pinterestUrl": "http://www.pinterest.com/aboutespanol",
+            "gplusUrl": "https://plus.google.com/113761281873276951272"
+        },
+        "food": {
+            "accentColor": "F05A14",
+            "facebookUrl": "http://www.facebook.com/aboutdotcomfood",
+            "twitterUrl": "http://twitter.com/aboutfood",
+            "pinterestUrl": "http://www.pinterest.com/aboutcomfood",
+            "gplusUrl": "http://google.com/+aboutdotcom"
+        },
+        "health": {
+            "accentColor": "00A0D2",
+            "facebookUrl": "https://www.facebook.com/AboutHealth",
+            "twitterUrl": "http://twitter.com/aboutcomHealth",
+            "pinterestUrl": "http://www.pinterest.com/aboutcomhealth",
+            "gplusUrl": "http://google.com/+aboutdotcom"
+        },
+        "homegarden": {
+            "accentColor": "8C0A91",
+            "facebookUrl": "http://www.facebook.com/aboutathome",
+            "twitterUrl": "http://twitter.com/aboutathome",
+            "pinterestUrl": "http://www.pinterest.com/aboutathome",
+            "gplusUrl": "http://google.com/+aboutdotcom"
+        },
+        "money": {
+            "accentColor": "1E46A5",
+            "facebookUrl": "http://www.facebook.com/aboutdotcommoney",
+            "twitterUrl": "http://twitter.com/aboutmoney",
+            "pinterestUrl": "http://www.pinterest.com/aboutdotcom",
+            "gplusUrl": "http://google.com/+aboutdotcom"
+        },
+        "newsissues": {
+            "accentColor": "FFA114",
+            "facebookUrl": "http://www.facebook.com/aboutdotcom",
+            "twitterUrl": "http://twitter.com/aboutdotcom",
+            "pinterestUrl": "http://www.pinterest.com/aboutdotcom",
+            "gplusUrl": "http://google.com/+aboutdotcom"
+        },
+        "parenting": {
+            "accentColor": "FF4F4F",
+            "facebookUrl": "http://www.facebook.com/aboutdotcomparenting",
+            "twitterUrl": "http://twitter.com/aboutparenting",
+            "pinterestUrl": "http://www.pinterest.com/aboutparenting",
+            "gplusUrl": "http://google.com/+aboutdotcom"
+        },
+        "religion": {
+            "accentColor": "593DAB",
+            "facebookUrl": "http://www.facebook.com/aboutdotcom",
+            "twitterUrl": "http://twitter.com/aboutdotcom",
+            "pinterestUrl": "http://www.pinterest.com/aboutdotcom",
+            "gplusUrl": "http://google.com/+aboutdotcom"
+        },
+        "sports": {
+            "accentColor": "FF4714",
+            "facebookUrl": "https://www.facebook.com/aboutdotcomsports",
+            "twitterUrl": "http://twitter.com/aboutsports",
+            "pinterestUrl": "http://www.pinterest.com/aboutdotcom",
+            "gplusUrl": "http://google.com/+aboutdotcom"
+        },
+        "style": {
+            "accentColor": "BA0082",
+            "facebookUrl": "http://www.facebook.com/aboutstyle",
+            "twitterUrl": "https://twitter.com/aboutpopstyle",
+            "pinterestUrl": "http://www.pinterest.com/aboutpopstyle",
+            "gplusUrl": "http://google.com/+aboutdotcom"
+        },
+        "compute": {
+            "accentColor": "00B8E4",
+            "facebookUrl": "http://www.facebook.com/aboutdotcomtech",
+            "twitterUrl": "http://twitter.com/abouttech",
+            "pinterestUrl": "http://www.pinterest.com/aboutdotcom",
+            "gplusUrl": "http://google.com/+aboutdotcom"
+        },
+        "travel": {
+            "accentColor": "00BE87",
+            "facebookUrl": "http://www.facebook.com/aboutdotcomtravel",
+            "twitterUrl": "http://twitter.com/abouttravel",
+            "pinterestUrl": "http://www.pinterest.com/aboutcomtravel",
+            "gplusUrl": "http://google.com/+aboutdotcom"
+        }
+    }
+)}
