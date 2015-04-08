@@ -44,20 +44,16 @@
 																			<td style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 15px; text-align: right; padding-right: 10px;" valign="middle" class="accent">Follow Us</td>
 																			<td valign="middle">
 																				<a href="{channelMap[channel]['facebookUrl'] ?: 'http://www.facebook.com/aboutdotcom'}">
-																					<img width="40" height="40" alt="Follow Us on Facebook" src="http://0.tqn.com/f/newsletter/soc/{channel ?: 'about'}_FB.png" />
-																				</a>
+																					<img width="40" height="40" alt="Follow Us on Facebook" src="http://0.tqn.com/f/newsletter/soc/{channel ?: 'about'}_FB.png" /></a>
 																				&nbsp;
 																				<a href="{channelMap[channel]['twitterUrl'] ?: 'http://twitter.com/aboutdotcom'}">
-																					<img width="40" height="40" alt="Follow Us on Twitter" src="http://0.tqn.com/f/newsletter/soc/{channel ?: 'about'}_twitter.png" />
-																				</a>
+																					<img width="40" height="40" alt="Follow Us on Twitter" src="http://0.tqn.com/f/newsletter/soc/{channel ?: 'about'}_twitter.png" /></a>
 																				&nbsp;
 																				<a href="{channelMap[channel]['pinterestUrl'] ?: 'http://www.pinterest.com/aboutdotcom'}">
-																					<img width="40" height="40" alt="Follow Us on Pinterest" src="http://0.tqn.com/f/newsletter/soc/{channel ?: 'about'}_pin.png" />
-																				</a>
+																					<img width="40" height="40" alt="Follow Us on Pinterest" src="http://0.tqn.com/f/newsletter/soc/{channel ?: 'about'}_pin.png" /></a>
 																				&nbsp;
 																				<a href="{channelMap[channel]['gplusUrl'] ?: 'http://google.com/+aboutdotcom'}">
-																					<img width="40" height="40" alt="Follow Us on Google+" src="http://0.tqn.com/f/newsletter/soc/{channel ?: 'about'}_gPlus.png" />
-																				</a>
+																					<img width="40" height="40" alt="Follow Us on Google+" src="http://0.tqn.com/f/newsletter/soc/{channel ?: 'about'}_gPlus.png" /></a>
 																			</td>
 																		</tr>
 																	</table>
@@ -111,137 +107,111 @@
 																							</table>
 																						</td>
 																					</tr>
-																					{* ### IN PROGRESS ### *}
-																					
-																					{* ### THIS LOOP REPLACES FOUR XSL IF BLOCKS ### *}
-
-																					{* Use brute force to count the number of items, up to maxItems (4) *}
-																					{maxItems = 4}
 																					{numberOfItems = 0}
-																					{foreach newsletter.headlineranker.headline_list as i, item}
-																						{numberOfItems = numberOfItems + 1}
-																						{if numberOfItems = maxItems}
+																					{lastItemIndex = 0}
+																					{MAX_ITEMS = 4}
+																					{foreach newsletter.headlineranker.headline_list as headlineIndex, headlineItem}
+																						{if numberOfItems == MAX_ITEMS}
 																							{break}
 																						{/if}
-																					{/foreach}
-																					{* Loop through up to four headlines *}
-																					{foreach newsletter.headlineranker.headline_list as i, item}
-																						<tr>
-																						{* Special styling for first and last td *}
-																						{if numberOfItems == 1 } {* If there's just one item, add padding-top, border-bottom *}
-																							<td valign="top" width="100%" style="padding-top:15px; padding-bottom:15px; border-bottom:1px solid #e2e2e2; color: #121212; padding-bottom:15px;">
-																						{else if i == 0} {* For the first item, add padding-top *}
-																							<td valign="top" width="100%" style="padding-top:15px; padding-bottom:15px; color: #121212; padding-bottom:15px;">
-																						{else if i == numberOfItems - 1} {* For the last item, add border-bottom *}
-																							<td valign="top" width="100%" style="padding-bottom:15px; border-bottom:1px solid #e2e2e2; color: #121212; padding-bottom:15px;">
-																						{else} (* For other items, no padding-top, no border-bottom *}
-																							<td valign="top" width="100%" style="padding-bottom:15px; color: #121212; padding-bottom:15px;">
-																						{/if}
-																								<table width="100%" border="0" cellpadding="0" cellspacing="0">
-																									<tr>
-																										<td style="font-family:'Roboto Slab', Helvetica, Arial, sans-serif;font-size: 24px; -webkit-font-smoothing: antialiased; line-height: 26px; text-align: left; font-weight: bold;">
-																											<a style="text-decoration:none;" class="dktxt" href={item.link.uri}'>{item.link.text}</a>
-																										</td>
-																									</tr>
-																									<tr>
-																										<td style="padding-top: 10px; font-family: Georgia, serif; font-size: 16px; line-height: 22px; text-align: left; color: #121212;">
-																											{item.annotation}
-																										</td>
-																										{* ### Since the old form didn't offer images, I won't display them here ###
-																										<xsl:if test="top_headlines/headline[1]/image/url != ''">
-																											<td valign="top" style="padding:15px 0 5px 15px">
-																												<img width="125">
-																												<xsl:attribute name="src">
-																												<xsl:value-of select="top_headlines/headline[1]/image/url"/>
-																												</xsl:attribute>
-																												</img>
+																						{if headlineItem.link.text && headlineItem.annotation}
+																							{numberOfItems = numberOfItems + 1}
+																							{lastItemIndex = headlineIndex}
+																							{headlineStyle = 'color: #121212; padding-bottom:15px;'}
+																							{if numberOfItems == 1}
+																								{headlineStyle = headlineStyle + ' padding-top:15px;'}
+																							{/if}
+																							{if numberOfItems == MAX_ITEMS}
+																								{headlineStyle = headlineStyle + ' border-bottom:1px solid #e2e2e2;'}
+																							{/if}
+																							<tr>
+																								<td valign="top" width="100%" style="{headlineStyle}">
+																									<table width="100%" border="0" cellpadding="0" cellspacing="0">
+																										<tr>
+																											<td style="font-family:'Roboto Slab', Helvetica, Arial, sans-serif;font-size: 24px; -webkit-font-smoothing: antialiased; line-height: 26px; text-align: left; font-weight: bold;">
+																												<a style="text-decoration:none;" class="dktxt" href="{headlineItem.link.uri}">
+																													{headlineItem.link.text}
+																												</a>
 																											</td>
-																										</xsl:if>
-																										*}
-																									</tr>
-																									<tr>
-																										<td style="padding-top:10px;">
-																											<table>
-																												<tr>
-																													<td width="125" style="padding-right: 20px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13px; text-align: left; color: #BA0082; font-weight: bold;">
-																														<a style="text-decoration: none;" class="accent" href={item.link.uri}'>READ NOW <span style="font-size: 18px;">&#187;</span></a>
-																													</td>
-																													<td>
-																														<table>
-																															<tr>
-																																<td valign="middle" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px; text-align: left; color: #989898; padding-right:8px;">
-																																	Share 
-																																</td>
-																																<td>
-																																	<a class='sharebtn' href='http://www.facebook.com/share.php?u={item.link.uri}&text={item.link.text}'><img width='18' height='19' alt='Share on Facebook' src='http://0.tqn.com/f/newsletter/soc/share_FB.jpg'></img></a>
-																																	&nbsp;
-																																	<a class='sharebtn' href='http://twitter.com/share?url={item.link.uri}&text={item.link.text}'><img width='18' height='19' alt='Share on Twitter' src='http://0.tqn.com/f/newsletter/soc/share_twitter.jpg'></img></a>
-																																</td>
-																															</tr>
-																														</table>
-																													</td>
-																												</tr>
-																											</table>
-																										</td>
-																									</tr>
-																								</table>
-																							</td>
-																						</tr>
-																						{if i == maxItems - 1}
-																							{break}
+																										</tr>
+																										<tr>
+																											<td style="padding-top: 10px; font-family: Georgia, serif; font-size: 16px; line-height: 22px; text-align: left; color: #121212;">
+																												{headlineItem.annotation}
+																											</td>
+																											{** TEXT ONLY
+																											{if headlineItem.image.url}
+																												<td valign="top" style="padding:15px 0 5px 15px">
+																													<img width="125" src="{headlineItem.image.url}" />
+																												</td>
+																											{/if}
+																											**}
+																										</tr>
+																										<tr>
+																											<td style="padding-top:10px;">
+																												<table>
+																													<tr>
+																														<td width="125" style="padding-right: 20px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13px; text-align: left; color: #BA0082; font-weight: bold;">
+																															<a style="text-decoration: none;" class="accent" href="{headlineItem.link.uri}">READ NOW <span style="font-size: 18px;">&#187;</span></a>
+																														</td>
+																														<td>
+																															<table>
+																																<tr>
+																																	<td valign="middle" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px; text-align: left; color: #989898; padding-right:8px;">
+																																		Share
+																																	</td>
+																																	<td>
+																																		<a class="sharebtn" href="http://www.facebook.com/share.php?u={headlineItem.link.uri}&text={headlineItem.link.text}">
+																																			<img width="18" height="19" alt="Share on Facebook" src="http://0.tqn.com/f/newsletter/soc/share_FB.jpg" />
+																																		</a>
+																																		&nbsp;
+																																		<a class="sharebtn" href="http://twitter.com/share?url={headlineItem.link.uri}&text={headlineItem.link.text}">
+																																			<img width="18" height="19" alt="Share on Twitter" src="http://0.tqn.com/f/newsletter/soc/share_twitter.jpg" />
+																																		</a>
+																																	</td>
+																																</tr>
+																															</table>
+																														</td>
+																													</tr>
+																												</table>
+																											</td>
+																										</tr>
+																									</table>
+																								</td>
+																							</tr>
 																						{/if}
 																					{/foreach}
-																					{* ### END IN PROGRESS ### *}
-																					{* ### TODO ### *}
 																				</table>
 																			</td>
 																		</tr>
 																	</table>
 																	<table border="0" cellpadding="0" cellspacing="0" width="100%">
 																		<tr>
-																			<td style="padding-top:15px; padding-bottom:10px; font-family: 'Roboto Slab', Helvetica, Arial, sans-serif; font-size: 18px; -webkit-font-smoothing: antialiased; text-align: center; font-weight: bold;" class="accent">MORE FROM ABOUT.COM</td>
+																			<td style="padding-top:15px; padding-bottom:10px; font-family: 'Roboto Slab', Helvetica, Arial, sans-serif; font-size: 18px; -webkit-font-smoothing: antialiased; text-align: center; font-weight: bold;" class="accent">
+																				MORE FROM ABOUT.COM
+																			</td>
 																		</tr>
+																	
 																		<tr>
 																			<td style="padding-bottom:15px;">
 																				<table border="0" cellpadding="0" cellspacing="0" width="100%">
 																					<tr>
 																						<td valign="top" width="50%" style="font-family: Georgia, serif; font-size: 16px; line-height: 20px; text-align: left; color: #121212; font-weight: regular;">
 																							<table style="margin-top:3px" border="0" cellspacing="2" cellpadding="4">
-																								{* ### Loop through remaining headlines ### *}
-																								{* ### Replaces the xsl for-each that immediately follows ### *}
-																								{foreach newsletter.headlineranker.headline_list as i, item}
-																									{if i>= maxItems}
+																								{foreach newsletter.headlineranker.headline_list as headlineIndex, headlineItem}
+																									{if headlineIndex <= lastItemIndex}
+																										{continue}
+																									{/if}
+																									{if headlineItem.link.text && headlineItem.link.uri}
 																										<tr>
 																											<td width="5%" valign="top" style="color:#989898;font-size:16px;line-height:20px;">&#8226;</td>
 																											<td>
-																												<a style="text-decoration:none;" class="dktxt" href='{item.link.uri}'>{item.link.text}</a>
+																												<a style="text-decoration:none;" class="dktxt" href="{headlineItem.link.uri}">
+																													{headlineItem.link.text}
+																												</a>
 																											</td>
 																										</tr>
 																									{/if}
 																								{/foreach}
-																								{*
-																								<xsl:for-each select="top_headlines/headline">
-																									<xsl:if test="(position() &gt; 4) and (title[.!='']) and (url[.!=''])">
-																										<tr>
-																											<td width="5%" valign="top" style="color:#989898;font-size:16px;line-height:20px;">&#8226;</td>
-																											<td>
-																												<a>
-																												<xsl:attribute name="style">
-																												<xsl:text disable-output-escaping="yes"><![CDATA[text-decoration:none;]]></xsl:text>
-																												</xsl:attribute>
-																												<xsl:attribute name="class">
-																												<xsl:text disable-output-escaping="yes"><![CDATA[dktxt]]></xsl:text>
-																												</xsl:attribute>
-																												<xsl:attribute name="href">
-																												<xsl:value-of select="url"/>
-																												</xsl:attribute>
-																												<xsl:value-of select="title" disable-output-escaping="yes"/>
-																												</a>
-																											</td>
-																										</tr>
-																									</xsl:if>
-																								</xsl:for-each>
-																								*}
 																							</table>
 																						</td>
 																						<td class="resizem" style="border-collapse:collapse;">
@@ -252,7 +222,7 @@
 																								<tr>
 																									<td colspan="2" style="border-collapse:collapse;">
 																										<a href="http://li.about.com/click?s=112622&sz=300x250&li={blast.list}&e={email}&p={blast.id}" rel="nofollow" style="display:block;width:300px;height:250px;color:#00be87;text-decoration:none;">
-																										<img src="http://li.about.com/imp?s=112622&sz=300x250&li={blast.list}&e={email}&p={blast.id}" width="300" height="250" border="0" style="border-style:none;outline-style:none;display:block;transition:all .25s;" />
+																											<img src="http://li.about.com/imp?s=112622&sz=300x250&li={blast.list}&e={email}&p={blast.id}" width="300" height="250" border="0" style="border-style:none;outline-style:none;display:block;transition:all .25s;" />
 																										</a>
 																									</td>
 																								</tr>
@@ -267,12 +237,12 @@
 																								<tr>
 																									<td align="left" style="border-collapse:collapse;">
 																										<a href="http://li.about.com/click?s=112616&sz=116x15&li={blast.list}&e={email}&p={blast.id}" rel="nofollow" style="color:#00be87;text-decoration:none;">
-																										<img src="http://li.about.com/imp?s=112616&sz=116x15&li={blast.list}&e={email}&p={blast.id}" border="0" style="border-style:none;outline-style:none;display:block;transition:all .25s;" />
+																											<img src="http://li.about.com/imp?s=112616&sz=116x15&li={blast.list}&e={email}&p={blast.id}" border="0" style="border-style:none;outline-style:none;display:block;transition:all .25s;" />
 																										</a>
 																									</td>
 																									<td align="right" style="border-collapse:collapse;">
 																										<a href="http://li.about.com/click?s=112617&sz=69x15&li={blast.list}&e={email}&p={blast.id}" rel="nofollow" style="color:#00be87;text-decoration:none;">
-																										<img src="http://li.about.com/imp?s=112617&sz=69x15&li={blast.list}&e={email}&p={blast.id}" border="0" style="border-style:none;outline-style:none;display:block;transition:all .25s;" />
+																											<img src="http://li.about.com/imp?s=112617&sz=69x15&li={blast.list}&e={email}&p={blast.id}" border="0" style="border-style:none;outline-style:none;display:block;transition:all .25s;" />
 																										</a>
 																									</td>
 																								</tr>
@@ -289,37 +259,23 @@
 																				<table>
 																					<tr>
 																						<td style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px;" valign="middle" class="accent">
-																							<a href='http://www.about.com/cdn' class='accent' style='text-decoration:none;'>About </a>
+																							<a href="http://www.about.com/{channel}" class="accent" style="text-decoration:none;">
+																								About {channelDisplay}
+																							</a>
 																						</td>
-																						<td valign="middle" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px;color:#121212;"> | Follow Us:</td>
+																						<td valign="middle" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px;color:#121212;"> | Follow Us:&nbsp;</td>
 																						<td valign="middle">
-																							<a>
-																								<xsl:attribute name="href">
-																									<xsl:value-of select="$fbu"/>
-																								</xsl:attribute>
-																								<img width='40' height='40' alt='Follow Us on Facebook' src='http://0.tqn.com/f/newsletter/soc/footer_FB.png'></img>
-																							</a>
+																							<a href="{channelMap[channel]['facebookUrl'] ?: 'http://www.facebook.com/aboutdotcom'}">
+																								<img width="40" height="40" alt="Follow Us on Facebook" src="http://0.tqn.com/f/newsletter/soc/footer_FB.png" /></a>
 																							&nbsp;
-																							<a>
-																								<xsl:attribute name="href">
-																									<xsl:value-of select="$twu"/>
-																								</xsl:attribute>
-																								<img width='40' height='40' alt='Follow Us on Twitter' src='http://0.tqn.com/f/newsletter/soc/footer_twitter.png'></img>
-																							</a>
+																							<a href="{channelMap[channel]['twitterUrl'] ?: 'http://twitter.com/aboutdotcom'}">
+																								<img width="40" height="40" alt="Follow Us on Twitter" src="http://0.tqn.com/f/newsletter/soc/footer_twitter.png" /></a>
 																							&nbsp;
-																							<a>
-																								<xsl:attribute name="href">
-																									<xsl:value-of select="$ptu"/>
-																								</xsl:attribute>
-																								<img width='40' height='40' alt='Follow Us on Pinterest' src='http://0.tqn.com/f/newsletter/soc/footer_pin.png'></img>
-																							</a>
-																							<xsl:text disable-output-escaping="yes"><![CDATA[&nbsp;]]></xsl:text>
-																							<a>
-																								<xsl:attribute name="href">
-																									<xsl:value-of select="$gpu"/>
-																								</xsl:attribute>
-																								<img width='40' height='40' alt='Follow Us on Google+' src='http://0.tqn.com/f/newsletter/soc/footer_gPlus.png'></img>
-																							</a>
+																							<a href="{channelMap[channel]['pinterestUrl'] ?: 'http://www.pinterest.com/aboutdotcom'}">
+																								<img width="40" height="40" alt="Follow Us on Pinterest" src="http://0.tqn.com/f/newsletter/soc/footer_pin.png" /></a>
+																							&nbsp;
+																							<a href="{channelMap[channel]['gplusUrl'] ?: 'http://google.com/+aboutdotcom'}">
+																								<img width="40" height="40" alt="Follow Us on Google+" src="http://0.tqn.com/f/newsletter/soc/footer_gPlus.png" /></a>
 																						</td>
 																					</tr>
 																				</table>
@@ -327,9 +283,9 @@
 																		</tr>
 																		<tr>
 																			<td align="center" style="padding-top:15px; padding-bottom:15px; font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; color:#989898; text-align:center;font-size:14px;line-height:22px;">
-																				You are receiving this newsletter because you subscribed to the About 
-																				<xsl:value-of select="name"/>
-																				newsletter. If you wish to unsubscribe, please <a href="{optout_confirm_url}">click here</a>. If you would like to unsubscribe from all newsletters sent from About.com, please send an email to <a href="mailto:optout@about.com?subject=Unsubscribe">optout@about.com</a> with "Unsubscribe" as the subject line. 
+																				You are receiving this newsletter because you subscribed to the About {siteDisplay} newsletter.
+																				If you wish to unsubscribe, please <a href="{optout_confirm_url}">click here</a>.
+																				If you would like to unsubscribe from all newsletters sent from About.com, please send an email to <a href="mailto:optout@about.com?subject=Unsubscribe">optout@about.com</a> with "Unsubscribe" as the subject line. 
 																			</td>
 																		</tr>
 																		<tr>
@@ -343,18 +299,16 @@
 																			</td>
 																		</tr>
 																		<tr>
-																			<td>
-																				&#160;
-																			</td>
+																			<td>&#160;</td>
 																		</tr>
 																	</table>
 																</td>
 															</tr>
 															<tr>
 																<td height="1" width="100%"/>
-																<img height='1' width='1'>
-																	<xsl:attribute name="src">http://pixel3.about.com/mp/pixel/pixel.cgi?partner=<xsl:value-of select="pixelref"/></xsl:attribute>
-																</img>
+																{if newsletter.dockey}
+																	<img src="http://pixel3.about.com/mp/pixel/pixel.cgi?partner={site + '_' + newsletter.dockey}" height="1" width="1" />
+																{/if}
 															</tr>
 														</table>
 													</td>
@@ -370,69 +324,48 @@
 			</tr>
 		</table>
 		<!-- <p><small>If you believe this has been sent to you in error, please safely <a href="{optout_confirm_url}" style="color:#0099cc;text-decoration:none;" >unsubscribe</a>.</small></p> -->
-		<img src="{beacon_src}" /> 
+		<img src="{beacon_src}" />
 		<table cellpadding="0" cellspacing="0" border="0" width="24" height="6">
 			<tbody>
 				<tr>
 					<td style="border-collapse:collapse;">
-						<img src="http://li.about.com/imp?s=123663200&sz=2x1&li={blast.list}&e={email}&p={blast.id}" width="2" height="6" border="0" style="border-style:none;outline-style:none;display:block;"/> 
+						<img src="http://li.about.com/imp?s=123663200&sz=2x1&li={blast.list}&e={email}&p={blast.id}" width="2" height="6" border="0" style="border-style:none;outline-style:none;display:block;"/>
 					</td>
 					<td style="border-collapse:collapse;">
 						<img src="http://li.about.com/imp?s=123663201&sz=2x1&li={blast.list}&e={email}&p={blast.id}" width="2" height="6" border="0" style="border-style:none;outline-style:none;display:block;"/>
 					</td>
 					<td style="border-collapse:collapse;">
-						<img src="http://li.about.com/imp?s=123663202&sz=2x1&li={blast.list}&e={email}&p={blast.id}" width="2" height="6" border="0" style="border-style:none;outline-style:none;display:block;"/> 
+						<img src="http://li.about.com/imp?s=123663202&sz=2x1&li={blast.list}&e={email}&p={blast.id}" width="2" height="6" border="0" style="border-style:none;outline-style:none;display:block;"/>
 					</td>
 					<td style="border-collapse:collapse;">
-						<img src="http://li.about.com/imp?s=123663203&sz=2x1&li={blast.list}&e={email}&p={blast.id}" width="2" height="6" border="0" style="border-style:none;outline-style:none;display:block;"/> 
+						<img src="http://li.about.com/imp?s=123663203&sz=2x1&li={blast.list}&e={email}&p={blast.id}" width="2" height="6" border="0" style="border-style:none;outline-style:none;display:block;"/>
 					</td>
 					<td style="border-collapse:collapse;">
-						<img src="http://li.about.com/imp?s=123663204&sz=2x1&li={blast.list}&e={email}&p={blast.id}" width="2" height="6" border="0" style="border-style:none;outline-style:none;display:block;"/> 
+						<img src="http://li.about.com/imp?s=123663204&sz=2x1&li={blast.list}&e={email}&p={blast.id}" width="2" height="6" border="0" style="border-style:none;outline-style:none;display:block;"/>
 					</td>
 					<td style="border-collapse:collapse;">
-						<img src="http://li.about.com/imp?s=123663205&sz=2x1&li={blast.list}&e={email}&p={blast.id}" width="2" height="6" border="0" style="border-style:none;outline-style:none;display:block;"/> 
+						<img src="http://li.about.com/imp?s=123663205&sz=2x1&li={blast.list}&e={email}&p={blast.id}" width="2" height="6" border="0" style="border-style:none;outline-style:none;display:block;"/>
 					</td>
 					<td style="border-collapse:collapse;">
-						<img src="http://li.about.com/imp?s=123663206&sz=2x1&li={blast.list}&e={email}&p={blast.id}" width="2" height="6" border="0" style="border-style:none;outline-style:none;display:block;"/> 
+						<img src="http://li.about.com/imp?s=123663206&sz=2x1&li={blast.list}&e={email}&p={blast.id}" width="2" height="6" border="0" style="border-style:none;outline-style:none;display:block;"/>
 					</td>
 					<td style="border-collapse:collapse;">
-						<img src="http://li.about.com/imp?s=123663207&sz=2x1&li={blast.list}&e={email}&p={blast.id}" width="2" height="6" border="0" style="border-style:none;outline-style:none;display:block;"/> 
+						<img src="http://li.about.com/imp?s=123663207&sz=2x1&li={blast.list}&e={email}&p={blast.id}" width="2" height="6" border="0" style="border-style:none;outline-style:none;display:block;"/>
 					</td>
 					<td style="border-collapse:collapse;">
-						<img src="http://li.about.com/imp?s=123663208&sz=2x1&li={blast.list}&e={email}&p={blast.id}" width="2" height="6" border="0" style="border-style:none;outline-style:none;display:block;"/> 
+						<img src="http://li.about.com/imp?s=123663208&sz=2x1&li={blast.list}&e={email}&p={blast.id}" width="2" height="6" border="0" style="border-style:none;outline-style:none;display:block;"/>
 					</td>
 					<td style="border-collapse:collapse;">
-						<img src="http://li.about.com/imp?s=123663209&sz=2x1&li={blast.list}&e={email}&p={blast.id}" width="2" height="6" border="0" style="border-style:none;outline-style:none;display:block;"/> 
+						<img src="http://li.about.com/imp?s=123663209&sz=2x1&li={blast.list}&e={email}&p={blast.id}" width="2" height="6" border="0" style="border-style:none;outline-style:none;display:block;"/>
 					</td>
 					<td style="border-collapse:collapse;">
-						<img src="http://li.about.com/imp?s=123663210&sz=2x1&li={blast.list}&e={email}&p={blast.id}" width="2" height="6" border="0" style="border-style:none;outline-style:none;display:block;"/> 
+						<img src="http://li.about.com/imp?s=123663210&sz=2x1&li={blast.list}&e={email}&p={blast.id}" width="2" height="6" border="0" style="border-style:none;outline-style:none;display:block;"/>
 					</td>
 					<td style="border-collapse:collapse;">
-						<img src="http://li.about.com/imp?s=123663211&sz=2x1&li={blast.list}&e={email}&p={blast.id}" width="2" height="6" border="0" style="border-style:none;outline-style:none;display:block;"/> 
+						<img src="http://li.about.com/imp?s=123663211&sz=2x1&li={blast.list}&e={email}&p={blast.id}" width="2" height="6" border="0" style="border-style:none;outline-style:none;display:block;"/>
 					</td>
 				</tr>
 			</tbody>
 		</table>
 	</body>
 </html>
-</xsl:template>
-<xsl:template name="string-replace-all">
-<xsl:param name="text"/>
-<xsl:param name="replace"/>
-<xsl:param name="by"/>
-<xsl:choose>
-	<xsl:when test="contains($text, $replace)">
-		<xsl:value-of select="substring-before($text,$replace)"/>
-		<xsl:value-of select="$by"/>
-		<xsl:call-template name="string-replace-all">
-			<xsl:with-param name="text" select="substring-after($text,$replace)"/>
-			<xsl:with-param name="replace" select="$replace"/>
-			<xsl:with-param name="by" select="$by"/>
-		</xsl:call-template>
-	</xsl:when>
-	<xsl:otherwise>
-		<xsl:value-of select="$text"/>
-	</xsl:otherwise>
-</xsl:choose>
-</xsl:template>
-</xsl:stylesheet>
